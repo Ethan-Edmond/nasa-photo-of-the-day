@@ -27,9 +27,9 @@ function App() {
 
   return (
     <div className="App">
-      <input type="date" max={initialDate} onChange={e => setDate(e.target.value)}/>
       {data && <Pod imageURL={data.url} altText={data.title}/>}
       {data && <Descr data={data}/>}
+      <input type="date" max={initialDate} onChange={e => setDate(e.target.value)}/>
     </div>
   );
 }
