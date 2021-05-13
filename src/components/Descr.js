@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import TextField from '@material-ui/core/TextField';
 
 const PodContainer = styled.div`
   width: 49%;
@@ -42,15 +43,25 @@ const Explanation = styled.p`
   text-align: justify;
 `;
 
-export default function Descr({data, setDate, initialDate}){
-  const {title, date, explanation, media_type} = data;
+export default function Descr({data, setDate, initialDate, setExplOpen, explOpen}){
+  const {title, explanation, media_type} = data;
+
   return (
     <PodContainer>
       <Title>
         {title}
       </Title>
       <DateHeader>
-        <CapSpan className="media-type">{media_type}</CapSpan> for the date of: <input type="date" max={initialDate} min="1995-06-16" onChange={e => setDate(e.target.value)}/>
+        <CapSpan className="media-type">{media_type} </CapSpan>
+        for the date of: <></>
+        <TextField
+          id="date"
+          type="date"
+          inputProps={{
+            max: initialDate,
+            min: "1995-06-16"
+          }}
+          onChange={e => setDate(e.target.value)}/>
       </DateHeader>
       <Explanation>
         {explanation}
