@@ -18,7 +18,7 @@ const PodContainer = styled.div`
 
 export default function Pod ({imageURL, altText}){
   return (
-    <PodContainer className="Pod" imageURL={imageURL} aria-role="img" aria-label={"Astronomy photo of the day:" + altText}>
+    <PodContainer className="Pod" imageURL={imageURL} role="img" aria-label={"Astronomy photo of the day:" + altText}>
     </PodContainer>
   );
 }

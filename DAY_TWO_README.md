@@ -22,7 +22,7 @@ I wanted them to be different pull requests, so I made an ethan-edmond-day2 bran
 
 ### Task 2a: MVP Requirements
 
-- [ ] Style your app using styled-components.
+- [x] Style your app using styled-components.
 
 ### Task 3: Stretch Problems
 
@@ -36,7 +36,7 @@ Do not attempt stretch problems until MVP has been reached and a final commit ha
 
 Follow these steps for completing your project.
 
-- [ ] Submit a Pull-Request to merge Branch into `main` (student's Repository).
+- [x] Submit a Pull-Request to merge Branch into `main` (student's Repository).
 
 -----
 
