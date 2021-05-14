@@ -6,7 +6,8 @@ import axios from "axios";
 import fetchObj from "./fetchObj";
 import styled from "styled-components";
 
-const today = new Date();
+let today = new Date();
+today.setDate(today.getDate() - 1);
 const initialDate = today.toJSON().slice(0,10);
 
 const OuterBox = styled.div`

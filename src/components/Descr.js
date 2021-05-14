@@ -1,6 +1,7 @@
-import React from "react";
+import React, { useState } from "react";
 import styled from "styled-components";
 import TextField from '@material-ui/core/TextField';
+import { Collapse, Button } from "reactstrap";
 
 const PodContainer = styled.div`
   width: 49%;
@@ -38,13 +39,14 @@ const DateHeader = styled.h4`
   margin: 0 1%;
 `;
 
-const Explanation = styled.p`
+const Explanation = styled.div`
   margin: 1% 3.5%;
   text-align: justify;
 `;
 
-export default function Descr({data, setDate, initialDate, setExplOpen, explOpen}){
+export default function Descr({data, setDate, initialDate}){
   const {title, explanation, media_type} = data;
+  const [isOpen, setIsOpen] = useState(true);
 
   return (
     <PodContainer>
@@ -63,9 +65,12 @@ export default function Descr({data, setDate, initialDate, setExplOpen, explOpen
           }}
           onChange={e => setDate(e.target.value)}/>
       </DateHeader>
-      <Explanation>
-        {explanation}
-      </Explanation>
+      <Button onClick={e => setIsOpen(!isOpen)}>Collapse</Button>
+      <Collapse isOpen={isOpen}>
+        <Explanation>
+          {explanation}
+        </Explanation>
+      </Collapse>
     </PodContainer>
   );
 }
