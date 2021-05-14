@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from "react";
-import "./App.css";
 import Pod from "./components/Pod";
 import Descr from "./components/Descr";
 import axios from "axios";

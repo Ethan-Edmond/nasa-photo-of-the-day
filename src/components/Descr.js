@@ -4,7 +4,6 @@ import TextField from '@material-ui/core/TextField';
 import { Collapse, Button } from "reactstrap";
 import theme from "../theme";
 
-console.log(theme);
 const PodContainer = styled.div`
   width: 49%;
   background-color: ${theme.color1};
