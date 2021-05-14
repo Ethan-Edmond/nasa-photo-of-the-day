@@ -3,7 +3,6 @@ import styled from "styled-components";
 
 const PodContainer = styled.div`
   background: url("${props => props.imageURL}");
-  border: 1px solid red;
 
   @media ${p => p.theme.breakpointMobile}{
     height: 600px;
