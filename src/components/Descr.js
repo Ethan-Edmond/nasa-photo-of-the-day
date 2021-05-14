@@ -1,19 +1,21 @@
 import React, { useState } from "react";
-import styled from "styled-components";
+import styled from "@emotion/styled";
 import TextField from '@material-ui/core/TextField';
 import { Collapse, Button } from "reactstrap";
+import theme from "../theme";
 
+console.log(theme);
 const PodContainer = styled.div`
   width: 49%;
-  background-color: ${p => p.theme.color1};
-  border: 4px outset ${p => p.theme.color2};
+  background-color: ${theme.color1};
+  border: 4px outset ${theme.color2};
   border-radius: 5px;
   overflow: auto;
   display: flex;
   flex-direction: column;
   align-items: center;
 
-  @media ${p => p.theme.breakpointMobile}{
+  @media ${theme.breakpointMobile}{
     width: 98%;
     margin: 5px auto;
 border: none;
@@ -26,13 +28,13 @@ const CapSpan = styled.span`
 `;
 
 const Title = styled.h2`
-  background-color: ${p => p.theme.color3};
-  color: ${p => p.theme.color1};
+  background-color: ${theme.color3};
+  color: ${theme.color1};
   margin: 4px;
   border-radius: 3px;
-  border: 3px solid ${p => p.theme.color4};
+  border: 3px solid ${theme.color4};
   padding: 6px 10px 10px;
-  text-shadow: 2px 1px ${p => p.theme.color2};
+  text-shadow: 2px 1px ${theme.color2};
 `;
 
 const DateHeader = styled.h4`
